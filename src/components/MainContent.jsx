@@ -86,7 +86,6 @@ export default function MainContent() {
 		{ key: "Isha", displayName: "العشاء" },
 	];
 	const getTimings = async () => {
-		console.log("calling the api");
 		const response = await axios.get(
 			`https://api.aladhan.com/v1/timingsByCity?country=JO&city=${selectedCity.apiName}`
 		);
@@ -98,7 +97,6 @@ export default function MainContent() {
 
 	useEffect(() => {
 		let interval = setInterval(() => {
-			console.log("calling timer");
 			setupCountdownTimer();
 		}, 1000);
 
@@ -162,25 +160,16 @@ export default function MainContent() {
 
 			remainingTime = totalDiffernce;
 		}
-		console.log(remainingTime);
-
 		const durationRemainingTime = moment.duration(remainingTime);
 
 		setRemainingTime(
 			`${durationRemainingTime.seconds()} : ${durationRemainingTime.minutes()} : ${durationRemainingTime.hours()}`
-		);
-		console.log(
-			"duration issss ",
-			durationRemainingTime.hours(),
-			durationRemainingTime.minutes(),
-			durationRemainingTime.seconds()
 		);
 	};
 	const handleCityChange = (event) => {
 		const cityObject = avilableCities.find((city) => {
 			return city.apiName == event.target.value;
 		});
-		console.log("the new value is ", event.target.value);
 		setSelectedCity(cityObject);
 	};
 
