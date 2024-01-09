@@ -218,27 +218,27 @@ export default function MainContent() {
 				<Prayer
 					name="الفجر"
 					time={timings.Fajr}
-					image="https://wepik.com/api/image/ai/9a07baa7-b49b-4f6b-99fb-2d2b908800c2"
+					image="img/fajr-prayer.png"
 				/>
 				<Prayer
 					name="الظهر"
 					time={timings.Dhuhr}
-					image="https://wepik.com/api/image/ai/9a07bb45-6a42-4145-b6aa-2470408a2921"
+					image="img/dhhr-prayer.png"
 				/>
 				<Prayer
 					name="العصر"
 					time={timings.Asr}
-					image="https://wepik.com/api/image/ai/9a07bb90-1edc-410f-a29a-d260a7751acf"
+					image="img/asr-prayer.png"
 				/>
 				<Prayer
 					name="المغرب"
 					time={timings.Sunset}
-					image="https://wepik.com/api/image/ai/9a07bbe3-4dd1-43b4-942e-1b2597d4e1b5"
+					image="img/maghrib-prayer.png"
 				/>
 				<Prayer
 					name="العشاء"
 					time={timings.Isha}
-					image="https://wepik.com/api/image/ai/9a07bc25-1200-4873-8743-1c370e9eff4d"
+					image="img/isha-prayer.png"
 				/>
 			</Stack>
 			{/*== PRAYERS CARDS ==*/}
