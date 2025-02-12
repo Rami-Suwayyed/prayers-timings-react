@@ -176,15 +176,15 @@ export default function MainContent() {
 	return (
 		<>
 			{/* TOP ROW */}
-			<Grid container>
-				<Grid xs={6}>
+			<Grid container spacing={2}>
+				<Grid item xs={12} sm={6}>
 					<div>
 						<h2>{today}</h2>
 						<h1>{selectedCity.displayName}</h1>
 					</div>
 				</Grid>
 
-				<Grid xs={6}>
+				<Grid item xs={12} sm={6}>
 					<div>
 						<h2>
 							متبقي حتى صلاة{" "}
@@ -200,9 +200,10 @@ export default function MainContent() {
 
 			{/* PRAYERS CARDS */}
 			<Stack
-				direction="row"
+				direction={{ xs: "column", sm: "row" }}
 				justifyContent={"space-around"}
 				style={{ marginTop: "50px" }}
+				spacing={2}
 			>
 				<Prayer
 					name="الفجر"
@@ -238,7 +239,7 @@ export default function MainContent() {
 				justifyContent={"center"}
 				style={{ marginTop: "40px" }}
 			>
-				<FormControl style={{ width: "20%" }}>
+				<FormControl style={{ width: "80%", maxWidth: "300px" }}>
 					<InputLabel id="demo-simple-select-label">
 						<span style={{ color: "white" }}>المدينة</span>
 					</InputLabel>
